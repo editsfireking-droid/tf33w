@@ -169,7 +169,7 @@ def reward_text(invites):
     if invites >= 9:
         return f" **10,000** {ROB_EMOJI}"
     if invites >= 7:
-        return f"} **7,500** {ROB_EMOJI}"
+        return f" **7,500** {ROB_EMOJI}"
     if invites >= 5:
         return f" **5,000** {ROB_EMOJI}"
     if invites >= 3:
