@@ -188,6 +188,7 @@ def verified(member):
 intents = discord.Intents.default()
 intents.members = True
 intents.guilds = True
+intents.message_content = True
 
 bot = commands.Bot(
     command_prefix=PREFIX,
