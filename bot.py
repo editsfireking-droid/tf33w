@@ -35,7 +35,7 @@ DB_PATH = os.getenv("DB_PATH", "/data/bloxy_plaza.db")
 ROB_EMOJI = "<:rob:1546469221184311336>"
 BOX_EMOJI = "<:box:1546469835163041792>"
 
-VERIFY_URL = "https://bloxlink.gr/verify?server=4072224305994532"
+VERIFY_URL = "https://verify-rover.cz/verify/?guild=4072224305994532"
 
 # Reward tiers from your screenshot.
 INVITE_REWARDS = {
@@ -167,13 +167,13 @@ def make_embed(title, description="", color=discord.Color.blurple()):
 
 def reward_text(invites):
     if invites >= 9:
-        return f"{BOX_EMOJI} **10,000** {ROB_EMOJI}"
+        return f" **10,000** {ROB_EMOJI}"
     if invites >= 7:
-        return f"{BOX_EMOJI} **7,500** {ROB_EMOJI}"
+        return f"} **7,500** {ROB_EMOJI}"
     if invites >= 5:
-        return f"{BOX_EMOJI} **5,000** {ROB_EMOJI}"
+        return f" **5,000** {ROB_EMOJI}"
     if invites >= 3:
-        return f"{BOX_EMOJI} **2,500** {ROB_EMOJI}"
+        return f" **2,500** {ROB_EMOJI}"
     return "No reward unlocked yet."
 
 
@@ -332,7 +332,7 @@ async def on_member_join(member):
 @bot.command(name="verify")
 async def verify_cmd(ctx):
     embed = make_embed(
-        "✅ Verify with Bloxlink",
+        "✅ Verify with Rover",
         (
             "**Verification is required to claim rewards.**\n\n"
             "Verification helps us confirm that you are a real member and "
@@ -547,10 +547,10 @@ async def postpanel(ctx):
     embed.add_field(
         name="🎁 Invite Rewards",
         value=(
-            f"**3 Invites** → **2,500** {ROB_EMOJI} {BOX_EMOJI}\n"
-            f"**5 Invites** → **5,000** {ROB_EMOJI} {BOX_EMOJI}\n"
-            f"**7 Invites** → **7,500** {ROB_EMOJI} {BOX_EMOJI}\n"
-            f"**9 Invites** → **10,000** {ROB_EMOJI} {BOX_EMOJI}"
+            f"**3 Invites** → **2,500** {ROB_EMOJI} \n"
+            f"**5 Invites** → **5,000** {ROB_EMOJI} \n"
+            f"**7 Invites** → **7,500** {ROB_EMOJI} \n"
+            f"**9 Invites** → **10,000** {ROB_EMOJI} \n"
         ),
         inline=False
     )
